@@ -2,13 +2,14 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class ApachePOIExcelWrite {
 
-    private static final String FILE_NAME = "D:/git repository/practice-demo-dusan/DusanExcel.xlsx";
+    private static final String FILE_NAME = "C:/Users/rastko.soskic/Desktop/d.pavlovic.ext/repo1/DusanExcel.xlsx";
 
     public static void main(String[] args) {
 
@@ -52,3 +53,12 @@ public class ApachePOIExcelWrite {
         System.out.println("Done");
     }
 }
+/*
+try with resources
+    try(FileOutputStream outputStream = new FileOutputStream(FILE_NAME);) {
+        workbook.write(outputStream);
+        } catch (FileNotFoundException e) {
+        e.printStackTrace();
+        } catch (IOException e) {
+        e.printStackTrace();
+        }*/
